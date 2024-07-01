@@ -1,0 +1,53 @@
+section#episode {
+  background-image: url(../episodes/Omashu__28Netflix_29_3.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+div.episode-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 650px) {
+  div.episode-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 470px) {
+  div.episode-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+div.episode-container > div.span-details > div.card {
+  position: relative;
+}
+div.episode-container > div.span-details {
+  background: rgb(255, 111, 0);
+  background: linear-gradient(
+    31deg,
+    rgba(255, 111, 0, 1) 35%,
+    rgba(255, 0, 39, 1) 100%
+  );
+  border-radius: 3rem 1rem;
+  overflow: hidden;
+  color: wheat;
+  text-shadow: 0 0 3px black, 0 0 6px black;
+  box-shadow: 0 0 5px rgb(255, 111, 0);
+}
+div.episode-container > div.span-details > .info > .overview {
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+div.episode-container > div.span-details > .info > .overview::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}

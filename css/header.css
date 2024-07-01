@@ -1,0 +1,105 @@
+header#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 3rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+header#header.stick {
+  background: rgb(255, 111, 0);
+  background: linear-gradient(
+    31deg,
+    rgba(255, 111, 0, 1) 35%,
+    rgba(255, 0, 39, 1) 100%
+  );
+  box-shadow: 0 0 2px gray;
+}
+
+header#header > h2 {
+  text-shadow: 2px 1px 2px aliceblue;
+}
+
+header#header > a.nav-bar-button {
+  font-size: 1.35rem;
+  display: none;
+  color: black;
+  text-shadow: 2px 1px 2px aliceblue;
+}
+header#header.stick > nav > ul > li > a,
+header#header.stick > a.nav-bar-button,
+header#header.stick > h2 {
+  color: wheat;
+  text-shadow: 0 0 3px black, 0 0 6px black;
+}
+header#header > nav {
+  transition: height 300ms ease;
+}
+header#header > nav > ul {
+  display: flex;
+  gap: 0.5rem;
+}
+header#header > nav > ul > li > a {
+  text-shadow: 2px 1px 2px aliceblue;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+
+  transition: background-color 300ms ease, color 300ms ease;
+}
+header#header > nav > ul > li > a:hover,
+header#header > nav > ul > li > a.active {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  header#header > nav {
+    position: absolute;
+    top: 100%;
+    right: 3rem;
+    width: 45%;
+    /* padding: 0.35rem 2vw; */
+
+    height: 0;
+    overflow: hidden;
+
+    background-color: aliceblue;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 3px black;
+  }
+  header#header > nav > ul {
+    flex-direction: column;
+  }
+  header#header > nav > ul > li > a {
+    padding: 0.4rem;
+    border-radius: 0;
+    display: block;
+  }
+  header#header > a.nav-bar-button {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 500px) {
+  header#header {
+    padding: 0.5rem 1rem;
+  }
+  header#header > nav {
+    width: 100%;
+    padding: 0;
+    right: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  header#header > nav > ul > li > a {
+    padding: 0.4rem 1.5rem;
+    border-radius: 0;
+  }
+  header#header > h2 {
+    font-size: 1.25rem;
+  }
+}

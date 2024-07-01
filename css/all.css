@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+li:has(> a.nav-button) {
+  list-style: none;
+}
+
+a:not(.nav-button) {
+  color: wheat;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* copyright */
+.trailer-viewer::after {
+  content: "Video Owned by NETFLIX";
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 100;
+  color: white;
+  text-shadow: 0 0 5px white, 0 0 10px black;
+}
+
+a.source-tag.up {
+  top: 5px;
+}
+a.source-tag.down {
+  bottom: 5px;
+}
+a.source-tag {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: max-content;
+  z-index: 10;
+  height: max-content;
+}
+a.source-tag.fixed {
+  position: sticky;
+  top: 5px;
+}
+a.source-tag:hover {
+  text-decoration: underline;
+}
